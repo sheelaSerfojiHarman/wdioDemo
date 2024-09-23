@@ -40,6 +40,7 @@ jobs:
               node-version: '18'
 
       -  name: Install dependancies
+         working-directory: ./
          run: npm install
 
       - name: Run tests
