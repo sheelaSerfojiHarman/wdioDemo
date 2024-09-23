@@ -151,21 +151,21 @@ exports.config = {
         }
      },
 
-    // onComplete: function (exitCode, config, capabilities, results) {
-    //     // Run your JavaScript file after the tests are complete
-    //     const { exec } = require('child_process');
-    //     exec('node /features/support/reportGenerator.js', (error, stdout, stderr) => {
-    //         if (error) {
-    //             console.error(`Error executing script: ${error}`);
-    //             return;
-    //         }
-    //         if (stderr) {
-    //             console.error(`stderr: ${stderr}`);
-    //             return;
-    //         }
-    //         console.log(`stdout: ${stdout}`);
-    //     });
-    // }
+    onComplete: function (exitCode, config, capabilities, results) {
+        // Run your JavaScript file after the tests are complete
+        const { exec } = require('child_process');
+        exec('node ../features/support/reportGenerator.js', (error, stdout, stderr) => {
+            if (error) {
+                console.error(`Error executing script: ${error}`);
+                return;
+            }
+            if (stderr) {
+                console.error(`stderr: ${stderr}`);
+                return;
+            }
+            console.log(`stdout: ${stdout}`);
+        });
+    }
 }
 
 
