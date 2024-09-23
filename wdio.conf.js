@@ -154,7 +154,7 @@ exports.config = {
     onComplete: function (exitCode, config, capabilities, results) {
         // Run your JavaScript file after the tests are complete
         const { exec } = require('child_process');
-        exec('node ../sauceDemo/features/support/reportGenerator.js', (error, stdout, stderr) => {
+        exec('node ../features/support/reportGenerator.js', (error, stdout, stderr) => {
             if (error) {
                 console.error(`Error executing script: ${error}`);
                 return;
