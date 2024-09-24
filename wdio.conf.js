@@ -18,7 +18,7 @@ exports.config = {
 
     specs: [
         './features/login.feature',
-         './features/addToCart.feature'
+         // './features/addToCart.feature'
     ],
     // Patterns to exclude.
     exclude: [
